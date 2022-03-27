@@ -25,7 +25,7 @@ function in_array_r($needle, $haystack, $strict = false, $lang='italian') {
 
 $b = array(
 array("hello", "Ciao"),
-array("Irix", "Linux")
+array("goodbye", "addio")
 );
 echo in_array_r("Hello", $b);
 ```
