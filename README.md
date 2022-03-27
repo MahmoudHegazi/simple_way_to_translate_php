@@ -12,20 +12,22 @@ function in_array_r($needle, $haystack, $strict = false, $lang='italian') {
     
     for ($i=0; $i<count($haystack); $i++) {
         $yourArray = array_map('toLowerSingleVal', $haystack[$i]);
-        if (($strict ? $yourArray === strtolower($needle) : $haystack[$i] == strtolower($needle)) || (is_array($yourArray) && in_array_r(strtolower($needle), $yourArray, $strict))) {
+        if (($strict ? $yourArray === strtolower($needle) : $yourArray == strtolower($needle)) || (is_array($yourArray) && in_array(strtolower($needle), $yourArray, $strict))) {
+        
+
                 if (count($yourArray) > $lang_index){
-                  return $haystack[$i][$lang_index];
+                  return $haystack[$i][$lang_index] ? $haystack[$i][$lang_index] : $needle;
                 } else {
                   return $needle;
                 }
     }     
 }
-    return false;
+    return $needle;
 }
 
 $b = array(
 array("hello", "Ciao"),
-array("goodbye", "addio")
+array("Irix", "")
 );
-echo in_array_r("Hello", $b);
+echo in_array_r("hello", $b);
 ```
