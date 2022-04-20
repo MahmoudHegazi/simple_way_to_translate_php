@@ -1,5 +1,6 @@
 # simple_way_to_translate_php
 
+##### note big apps use frameworks with alot of configurations and setup to reach same target this do it easy and fast and simple
 
 ```php
 
