@@ -1,6 +1,6 @@
 # simple_way_to_translate_php
 
-##### easy way to simple translate websites (with no prematers for now maybe in later update)
+##### easy way to simple translate websites (with no parameters for now maybe in later update)
 
 ```php
 
